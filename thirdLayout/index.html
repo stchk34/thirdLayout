@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="container">
       <div class="div1">
         <div class="img1">
@@ -24,34 +24,36 @@
             <p>+7(499) 777-77-77</p>
             <p>+7(499) 777-77-77</p>
           </div>
-          <div class="feedback">
-            <p><a href="#1">Обратная связь</a></p>
-            <div id="contact-us">
-              <div class="animate__animated animate__fadeIn">
-                <h1>Обратная связь</h1>
-                  <form action="#1">
-                    <label for="customerName">Ваше имя <em>&#x2a;</em></label>
-                    <input id="customerName" name="customerName" required="" type="text"
-                      placeholder="Поле обязательно для заполнения" />
-                    <label for="customerEmail" placeholder="Поле обязательно для заполнения">Email
-                      <em>&#x2a;</em></label>
+          <a href="#feedback" id="feedback_div2">Обратная связь</a>
+        </div>
+      </div>
+      <!--feedback form-->
+      <div id="feedback" class="popup">
+        <a href="#header" class="popup_area"></a>
+        <div class="popup_body">
+          <div class="popup_content">
+            <a href="#" class="popup_close">X</a>
+            <div class="popup_title">Обратная связь</div>
+            <div class="popup_text">
+              <label for="name"><b>Ваше имя *</b></label>
+              <input type="text" name="name" id="name" required>
 
-                    <input id="customerEmail" name="customerEmail" required="" type="email "
-                      placeholder="Поле обязательно для заполнения" />
-                    <label for="customerPhone">Телефон </label>
-                    <input id="customerPhone" name="customerPhone" type="tel" />
-                    <label for="customerNote">Сообщение <em>&#x2a;</em></label>
-                    <textarea id="customerNote" name="customerNote" required="" rows="4"
-                      placeholder="Поле обязательно для заполнения"></textarea>
-                    <button id="customerOrder">Отправить</button>
-                  </form>
-                </div>
-              </div>
+              <label for="phone"><b>Телефон *</b></label>
+              <input type="tel" name="telnumber" id="phone" required>
+
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Поле обязательно для заполнения" name="email" id="email" required>
+         
+              <label for="messages"><b>Сообщение</b></label>
+              <input type="text" name="messages" id="messages" required>
+              <button id="form">Отправить</button>
             </div>
           </div>
+          
         </div>
       </div>
   </header>
+
   <menu>
     <nav class="menu_list">
       <ul>
@@ -267,6 +269,7 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="popup.js"></script>
 </body>
 
 </html>
